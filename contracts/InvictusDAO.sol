@@ -2,12 +2,12 @@
 pragma solidity ^0.8.24;
 
 import {FHE, euint32, externalEuint32} from "@fhevm/solidity/lib/FHE.sol";
-import {SepoliaConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
+import {ZamaEthereumConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
 
 /// @title INVICTUS DAO Voting Contract
 /// @notice A privacy-preserving voting system using Fully Homomorphic Encryption
 /// @dev Votes are encrypted and processed securely using FHEVM
-contract InvictusDAO is SepoliaConfig {
+contract InvictusDAO is ZamaEthereumConfig {
     // Constants
     uint256 public constant PROPOSAL_CREATION_FEE = 0.01 ether; // 0.01 ETH to create a proposal
     uint256 public constant VOTE_WEIGHT_DIVISOR = 1000; // 0.001 ETH = 1 vote (1 ETH / 0.001 = 1000)
